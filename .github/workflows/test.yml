@@ -12,7 +12,7 @@ jobs:
     - uses: actions/checkout@v3
     - run: |
         wget https://download.java.net/java/GA/jdk19.0.1/afdd2e245b014143b62ccb916125e3ce/10/GPL/openjdk-19.0.1_macos-x64_bin.tar.gz 
-    - uses: actions/setup-java@v3
+    - uses: actions/setup-java@feature/fix-local-java-mac
       with:
         java-version: 19.0.1
         distribution: jdkfile
@@ -20,7 +20,7 @@ jobs:
     - run: |
         echo $JAVA_HOME
         mvn -version
-    - uses: actions/setup-java@v3
+    - uses: actions/setup-java@feature/fix-local-java-mac
       with:
         java-version: 19.0.1
         distribution: jdkfile

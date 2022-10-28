@@ -20,3 +20,11 @@ jobs:
     - run: |
         echo $JAVA_HOME
         mvn -version
+    - uses: actions/setup-java@v3
+      with:
+        java-version: 19.0.1
+        distribution: jdkfile
+        jdkFile: openjdk-19.0.1_macos-x64_bin.tar.gz
+    - run: |
+        echo $JAVA_HOME
+        mvn -version
